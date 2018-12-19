@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+.slide-outter{
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    /*overflow: hidden;*/
+    margin:20px auto;
+    border:1px solid gold;
+}
+.slide-inner{
+  	display:flex;
+  	position: relative;
+}
+slider-inner div{
+    width:100%;
+    height:100%;
+}
+.slide-inner img{
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	transition:1s ease-in-out;
+}
+.dot-bar{
+  	position: relative;
+  	width:100%;
+  	height:5%;
+  	background:green;
+  	text-align:center;
+}
+.dot-bar div{
+    height: 25px;
+    width: 25px; 
+    border-radius: 50%;
+    display: inline-block;
+    margin:2%;
+  	cursor: pointer;
+    background: pink;
+}
+.dot-bar div:nth-of-type(1){
+	background:hotpink;
+}
+ /*swipe**************************************************************/   
+.slideout{
+	animation:.5s slideout ease-in-out;
+	animation-fill-mode: forwards;
+}
+@keyframes slideout{
+	0%{margin-left:0}
+	100%{margin-left:-100%}
+}
+</style>
+    </head>
+    <body>
+						<div class="slide-outter">
+							<div class="slide-inner">
+								<img src="https://www.sushiexpress.com.tw/images/HomeAdCycle_dinshi/25.jpg?" alt="雪花1.jpg">
+								<img src="https://www.sushiexpress.com.tw/images/HomeAdCycle_dinshi/22.jpg?" alt="雪花2.jpg">
+								<img src="https://www.sushiexpress.com.tw/images/HomeAdCycle_dinshi/24.jpg?" alt="雪花3.jpg">
+							</div>
+							<div class="dot-bar">
+							    <div></div>
+							    <div></div>
+							    <div></div>
+							</div>
+						</div>	
+				
+<script>
+var dots=document.querySelectorAll(".dot-bar div");
+var imgs=document.querySelectorAll(".slide-inner img");
+var slideInner=document.querySelector(".slide-inner");
+var current=0;
+var slide=true;
+
+var clearDot=function(){
+	for(var i=0; i<dots.length; i++){
+		dots[i].style.background="pink";
+		}
+}
+function imgLoop(){
+		imgs[current].classList.add("slideout");
+		if(current<imgs.length-1){
+			current++;
+		} else {
+			current=0;
+		}	
+	clearDot();	
+    dots[current].style.background="hotpink"
+
+		var firstImg=document.querySelector(".slide-inner img:nth-of-type(1)");
+		var ml=getComputedStyle(firstImg, null).getPropertyValue("margin-left");
+		var width=getComputedStyle(firstImg, null).getPropertyValue("width");
+		if(Math.abs(parseFloat(ml))>=parseFloat(width)){
+			firstImg.classList.remove("slideout");
+			slideInner.appendChild(firstImg);
+		}
+	var t=setTimeout("imgLoop()",3000);
+}
+window.addEventListener("load", function(){
+	setTimeout("imgLoop()",3000);
+})
+
+
+//autoplay stop when hover*****************************************************************************
+var slideOutter=document.querySelector(".slide-outter");
+
+slideOutter.addEventListener("mouseover", function(){
+	alert("hi");
+	t.autoplay.stop();
+})
+slideOutter.addEventListener("mouseout", function(){
+	t.autoplay.start();
+})
+
+
+//windows onload******************************************************************************
+window.addEventListener('load', function() {
+
+})
+</script>
+    </body>
+</html>
