@@ -44,7 +44,6 @@ window.addEventListener("scroll",function(){
 	for(var i=0; i<sections.length;i++){
 		if(window.scrollY>=sections[i].offsetTop-1){
 			removeActive();
-			console.log("i:"+i);
 			navItems[i].classList.add("active");
 		}
 	}
@@ -52,7 +51,6 @@ window.addEventListener("scroll",function(){
 //navItem active on click	
 function clickNav(n){
 	removeActive();
-	console.log("n:"+n);
 	navItems[n].classList.add("active");
 	sections[n].scrollIntoView({behavior:'smooth', block:"start"});
 	document.querySelector(".game").play();
@@ -102,6 +100,79 @@ slideInner.addEventListener("mouseover", function(){
 slideInner.addEventListener("mouseleave", function(){
 	imgLoop();
 })
+
+// form sumbmit^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+//initialize Firebase
+ var config = {
+    apiKey: "AIzaSyDiCsaX3HCEqJbtCHYrPDIdtrw9LTYEIek",
+    authDomain: "contactform-c2a0c.firebaseapp.com",
+    databaseURL: "https://contactform-c2a0c.firebaseio.com",
+    projectId: "contactform-c2a0c",
+    storageBucket: "contactform-c2a0c.appspot.com",
+    messagingSenderId: "205647187411"
+  };
+   firebase.initializeApp(config);
+   
+//reference messages collection
+var messagesRef=firebase.database().ref("messages");
+
+//raddom number checking
+var a=Math.floor(Math.random()*10+1);
+var b=Math.floor(Math.random()*10+1);
+var sum=document.querySelector(".sum");
+document.querySelector(".a").innerHTML=a;
+document.querySelector(".b").innerHTML=b;
+
+// document.querySelector(".Submit").disabled = true;
+var answer;
+sum.addEventListener("keyup", function(){
+	console.log(1);
+	if(Number(document.querySelector(".sum").value)==a+b){
+	console.log("correct");
+	document.querySelector(".submit").style.background="var(--brown)";
+	document.querySelector(".submit").style.color="#f2f2f2";
+	answer=true;
+} else {
+	answer=false;
+}
+})
+// function to get form value
+document.querySelector("#contact-form").addEventListener("submit",function(e){
+	e.preventDefault();//sent to html page by default
+	if(answer==true){
+	// get value
+	var name=document.querySelector("#name").value;
+	var phone=document.querySelector("#phone").value;
+	var email=document.querySelector("#email").value;
+	var message=document.querySelector("#message").value;
+	
+	//save message
+	saveMessage(name, phone, email, message)
+	// show alert
+	document.querySelector(".alert-ok").style.display="block";
+	document.querySelector(".alert-ng").style.display="none";
+	setTimeout(function(){
+		document.querySelector(".alert-ok").style.display="none";
+	},3000)
+	//clear form input
+	document.querySelector("#contact-form").reset();		
+	} else {
+		document.querySelector(".alert-ng").style.display="block";
+	}
+})
+
+function saveMessage(name, email, phone, message){
+	var newMessageRef=messagesRef.push();
+	newMessageRef.set({
+		name:name,
+		phone:phone,
+		email:email,
+		message:message,
+	})
+}
+
+
+
 
 
 
