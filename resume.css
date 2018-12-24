@@ -8,8 +8,9 @@ body, html{
     padding:0;
     font-weight:400;
     line-height: 1.5em;
-                font-family: "Leto", sans serif;
-    font-family: 'Roboto Condensed';
+}
+body *{
+    font-family: 'Roboto Condensed', sans-serif;
 }
 .container{
     max-width:1170px;
@@ -140,7 +141,6 @@ slider-inner div{
 	display: flex;
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
-    
 }
 .wrapper ul{
     width:27.3%;
@@ -319,6 +319,8 @@ i{
   background-color: #f2f2f2;
   color: var(--brown);
   padding:12px 0;
+  font-size: 1.2rem;
+  font-weight: 900;
 }
 .contact label{
     padding:14px 20px;
@@ -469,9 +471,3 @@ i{
     background:var(--brown);
     color:#f2f2f2;
 }
-
-/*@media only screen and (max width:767px){*/
-/*    .pimg1, .pimg2, .pimg3{*/
-/*        background-attachment: scroll;*/
-/*    }*/
-/*}*/

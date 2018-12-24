@@ -1,0 +1,24 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "main": "resume.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lisawcoding/resume.git"
+  },
+  "author": "lisa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lisawcoding/resume/issues"
+  },
+  "homepage": "https://github.com/lisawcoding/resume#readme",
+  "keywords": [],
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  },
+  "devDependencies": {},
+  "description": "resume and projects"
+}

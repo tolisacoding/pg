@@ -31,14 +31,15 @@ var navItems=document.querySelectorAll(".navItem");
 var skills=document.querySelector(".skills");
 var projects=document.querySelector(".projects");
 var coverletter=document.querySelector(".coverletter");
+var contact=document.querySelector(".contact");
 
 function removeActive(){
 	for(var i=0; i<navItems.length; i++){
 		navItems[i].classList.remove("active");
 	}
 }
-navItems[0].classList.add("active");
 
+navItems[0].classList.add("active");
 // navItem active on scroll
 window.addEventListener("scroll",function(){
 	for(var i=0; i<sections.length;i++){
