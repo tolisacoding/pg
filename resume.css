@@ -20,9 +20,6 @@ body *{
 .c{
     display: none;
 }
-.contact .c{
-    display: none;
-}
 .slideout{
     animation:1s ease-in;
 }
@@ -159,7 +156,12 @@ h3{
     display: inline-block;
     color:#f2f2f2; 
     background:var(--brown);
-    border:2px solid grey;
+    /*border:2px solid grey;*/
+    cursor: default;
+}
+.skills .wrapper li:hover{
+    opacity:1;
+    font-size: 1.5rem
 }
 .skills .description{
     width:100%;
@@ -255,8 +257,8 @@ i{
 	font-size: 5rem;
 	color:#5d5d5d;
 	position: fixed;
-	bottom:50px;
-	right:70px;
+    bottom: 1rem;
+    right:5rem;
 	z-index: 99;
     cursor:pointer;
     width:70px;
@@ -279,7 +281,6 @@ i{
 }
 .contact-info div{
     margin:1rem;
-    font-weight: 900;
 }
 .contact form{
     background-color: rgba(0,0,0,0.9);
@@ -355,6 +356,23 @@ i{
     text-align: center;
     width:90px;
 }
+.contact h3{
+    padding-top: 0;
+    margin-top: 0;
+}
+.contact .contact-info{
+    font-size: 1rem;
+}
+.icons img{
+    width:3rem;
+    height: auto;
+}
+#github{
+    float:right;
+}
+.contact .icons{
+    text-align: center;
+}
 
 /*others^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
 
@@ -393,12 +411,11 @@ i{
     .contact input[name=message]{
         padding-bottom: 120px;
     }
-    /*.contact input[type=submit]{*/
-    /*    width:92%;*/
-    /*    font-size: 1rem*/
-    /*}*/
     .contact .check-number{
         flex-direction:row;
+    }
+    #topBtn{
+        right: 1rem;
     }
 }
 
@@ -453,8 +470,9 @@ i{
     .projects h3{
         width:95%;
     }
-
- 
+        .contact .icons img{
+    width:2rem;
+}
 }
 
 /*classList/////////////////////////////////////////////////////////////////////////////*/
