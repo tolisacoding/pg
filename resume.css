@@ -366,23 +366,25 @@ i{
 .icons img{
     width:3rem;
     height: auto;
-    color: #f2f2f2;
-    background:grey;
-    border: 2px solid var(--brown);
-    border-radius: 50%;
-    padding:0.3rem;
-    position: relative;
-}
-.icons img:hover{
-    bottom:0.5rem;
 }
 #github{
+    width:5rem;
     float:right;
 }
 .contact .icons{
     text-align: center;
 }
-
+.contact .icons img{
+        color: #f2f2f2;
+    background:grey;
+    border: 2px solid var(--brown);
+    border-radius: 50%;
+    padding:0.3rem;
+}
+.icons img:hover{
+    position: relative;
+    bottom:0.5rem;
+}
 /*others^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
 
 .description{
