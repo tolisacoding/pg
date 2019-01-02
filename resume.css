@@ -366,6 +366,15 @@ i{
 .icons img{
     width:3rem;
     height: auto;
+    color: #f2f2f2;
+    background:grey;
+    border: 2px solid var(--brown);
+    border-radius: 50%;
+    padding:0.3rem;
+    position: relative;
+}
+.icons img:hover{
+    bottom:0.5rem;
 }
 #github{
     float:right;
