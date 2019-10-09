@@ -53,7 +53,7 @@ window.addEventListener("scroll",function(){
 function clickNav(n){
 	removeActive();
 	navItems[n].classList.add("active");
-	sections[n].scrollIntoView({behavior:'smooth', block:"start"});
+	sections[n].scrollIntoView({behavior:'smooth'});
 	document.querySelector(".game").play();
 	
 	if(window.getComputedStyle(hamburger).getPropertyValue("display")=="block"){
