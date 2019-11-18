@@ -479,9 +479,11 @@ i{
     .projects h3{
         width:95%;
     }
-        .contact .icons img{
-    width:2rem;
-}
+    .contact .icons img{
+    	width:2rem;
+    }
+    .pimg1 {
+        background-size: auto;
 }
 
 /*classList/////////////////////////////////////////////////////////////////////////////*/
