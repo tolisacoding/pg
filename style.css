@@ -391,7 +391,7 @@ i{
 .cards.creative {
 	justify-content: flex-start;
 }
-.cards.creative card {
+.cards.creative .card {
 	margin-left: .23rem;
 }
 
