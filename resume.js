@@ -7,7 +7,7 @@ var cbtn=document.querySelector("#chinese");
 var hamburger=document.querySelector(".hamburger");
 var navItemContainer=document.querySelector(".navItem-container");
 
-btn.classList.add("active");
+cbtn.classList.add("active");
 document.querySelector("#chinese").addEventListener("click", function(){
     for(var i=0; i<c.length; i++){
         c[i].style.display="block";
