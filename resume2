@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<meta http-equiv="X-UA-Compatible content=" ie=edge">-->
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|Lobster" rel="stylesheet">           
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        
+        <link rel="icon" href="https://previews.123rf.com/images/hellocaicai/hellocaicai1802/hellocaicai180200422/95965943-cartoon-mushroom.jpg">
+        <title>作品集</title>
+        
+        <link rel="stylesheet" type="text/css" href="resume.css">
+<style>
+input, button {
+    outline: none;
+    -webkit-appearance: none;/*remove safari default setting*/
+    -moz-appearance: none;
+    -webkit-border-radius:0; 
+    border-radius:0;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+    border-style: solid;
+}
+</style>
+</head>
+    
+<body>   
+    <header class="navbar">
+            <ul class="container">
+                <div class="navItem-container">
+                    <li class="navItem" onclick="clickNav(0)"><div class="c">簡介</div><div class="e">Cover Letter</div></li>
+                    <li class="navItem" onclick="clickNav(1)"><div class="c">專業技能</div><div class="e">Skills</div></li>
+                    <!--<li class="navItem" onclick="clickNav(2)"><div class="c">履歷表</div><div class="e">Resume</div></li>-->
+                    <li class="navItem" onclick="clickNav(2)"><div class="c">作品集</div><div class="e">My Projects</div></li>
+                    <li class="navItem" onclick="clickNav(3)"><div class="c">連絡我</div><div class="e">Contact Me</div></li>
+                </div>
+                <div class="language-container">
+                    <li id="chinese">文</li>
+                    <li id="english">A</li>  
+                    <li class="hamburger"><i class="fas fa-bars"></i></li>
+                </div>
+            </ul>
+    </header>
+    <!--navbar----------------------------------------------------------------------------------------------------------------------------->
+    <main class="pimg1">
+    <section class="section coverletter">
+        <div class="container">
+                    <div class="id-photo">
+                        <div class="slide-outter">
+                            <div class="slide-inner">
+                                <img src="img/me.jpg" alt="me">
+                                <img src="img/resume2.jpg" alt="resume1">
+                                <img src="img/resume3.jpg" alt="resume2">
+                            </div>
+                        </div>  
+                    </div>
+                <div class="icons">
+                    <a href="https://github.com/lisawcoding" target="_blank">
+                        <img src="img/icon/github.png" alt="github" id="github"></img>
+                    </a>
+                </div>
+                    <article class="e">
+                    <h2>Cover Letter</h2>
+                    <p>Dear Sir,</p>
+                    <p> 
+                        It was so appreciated that you visit my website and consider me as a candidate for this job.
+                    </p>
+                    <p> 
+                        I have self-taught online for a couple of months and so far focus on front-end web development.  I found coding is actually quite fun.  And there are tons of information online that anyone can reach for free.  I now have strong foundation for HTML, CSS and Javascript.  Although, I do not have computer science related education background nor work experience, I have already clone 3 websites to show that I can built a website all by myself.  Also, since I learned coding online delivered in both English and Mandarin, which means that I can discuss with English and Mandarin speaking customers for the website effects to find out what exactly they need and communicate with Engineers workers for the professional terms.
+                    </p>
+                    <p>
+                        For the over 10 years work experience, I work as international sales, international purchaser, translator, salsas person…etc.  I believe my previous work experience letting me more understand how to make a website that is more interested by the potential customers or purchasers and know what they need and also having knowledge of how a professional B2B website and a B2C website should be.  Besides, I can translate the website in both English and Mandarin vision. 
+                    </p>
+                    <p>
+                        Thank you very much for your time. Hope to hear from you soon.
+                        Best Regards,
+                    </p>
+                    <i>
+                        Lisa Wang
+                    </i>
+                </article>    
+                <article class="c">
+                    <h2>王玉婷</h2>
+                    <p> 
+                    玉婷自學網頁設計,主要為前端網頁部份。現在已熟悉HTML，CSS和Javascript，且會應用一些API等，作出responsive, slider, animation等效果，已可做到大多數前端網頁的效果與介面。
+                    <p>因為是自學，所以遇到新的網頁效果、新的框架、新的技術等都可以很快的自行在網路上找到資源，解決問題。</p>
+                    <p>而且我用英文及中文自學，所以可以利用的資源更多，所以專業人員、同事及客戶溝通專業術語都沒問題。之前的業務、採購、B2C網站管理的工作經驗也讓我對客戶對網站的需求有一定的了解，且翻譯公司標籤、手冊及文件、管理公司網站、B2C平台及行銷活動。</p>
+                    </p>
+                    <p>希望能有機會可以為貴司服務，謝謝您。</p>
+
+                </article>
+            </div>
+    </section>
+    <!--skills---------------------------------------------------------------------------------------------------------------------------------------->
+     <section class="section skills overlay">
+         <div class="container">
+         <div class="c">
+             <h2>專業技能</h2>
+            <div class="wrapper">
+            <ul>
+                <h3>前端語言</h3>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+                <li>jQuery</li>
+            </ul>
+            <ul>
+                <h3>開發工具</h3>
+                <li>Sublime Text 3</li>
+                <li>Chrome DevTools</li>
+                <li>AWS cloud9</li>
+            </ul>
+            <ul>
+                <h3>Library / 框架 / API</h3>
+                <li>Semantic UI</li>
+                <li>Bootstrap</li>
+                <li>Swiper</li>
+            </ul>
+            <ul>
+                <h3>互動網頁切版</h3>
+                <li>flex-box</li>
+                <li>CSS grid</li>
+                <li>basic Photoshop</li>
+            </ul>
+            <ul>
+                <h3>語言能力</h3>
+                <li>中文</li>
+                <li>英文</li>
+            </ul>
+            </div>
+            <div class="description">
+                <h3>技能簡介</h3>
+                <li>熟悉 HTML5 & CSS3，能夠解決跨瀏覽器的相容性</li>
+                <li>熟悉 flexbox, CSS grid 的切版方式，應用RWD網頁，手機、電腦，平面各尺吋</li>
+                <li>熟悉 CSS framework，API，如 Bootstrap / Swiper</li>
+                <li>熟悉 Javascript, DOM 及各種API應用</li>
+                <li>CSS網頁互動效果如：iframe,overlay, slider, autoplay, audio, fade/swiper, animation.</li>
+                <li>開發工具： Chrome Dev Tool 除錯、修改, sublime text 3, cloud9</li>
+                <li>API文件閱讀能力、遇到問題會上Stackoverflow/MDN/W3Schools查詢並解決</li>
+                <li>基本photo shop修圖</li>
+            </div>
+         </div>
+        <div class="e">
+            <h2>Skills</h2>
+            <div class="wrapper">
+                <ul>
+                    <h3>Programming</h3>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>jQuery</li>
+                </ul>
+                <ul>
+                    <h3>UX/UI</h3>
+                    <li>flex-box</li>
+                    <li>CSS grid</li>
+                    <li>basic Photoshop</li>
+                </ul>
+                <ul>
+                    <h3>Library/framework/API</h3>
+                    <li>jQery</li>
+                    <li>Semantic UI</li>
+                    <li>Bootstrap</li>
+                    <li>Swiper</li>
+                </ul>
+                <ul>
+                    <h3>Develompment Tools</h3>
+                    <li>Sublime Text 3</li>
+                    <li>Chrome DevTools</li>
+                    <li>AWS cloud9</li>
+                </ul>
+                <ul>
+                    <h3>Language</h3>
+                    <li>Chiese</li>
+                    <li>English</li>
+                </ul>
+            </div>
+                <div class="description">
+                    <h3>Description</h3>
+                    <li>Strong in HTML5, CSS 3, Javascript</li>
+                    <li>Proficien Responsive Website Deign</li>
+                    <li>Expert in front-end frameworks-jQery, Boostrap, swiper, sementic UI</li>
+                    <li>development tools: Chrome Dev Tool, sublime text 3, cloud9</li>
+                    <li>CSS RWD：iframe,overlay, slider, autoplay, audio, fade/swiper, animation.</li>
+                    <li>Chrome Dev Tool, sublime text 3, cloud9</li>
+                    <li>problem solving: Stackoverflow/MDN/W3Schools</li>
+                </div>
+        </div>
+        </div>
+    </section>
+    <!--projects---------------------------------------------------------------------------------------------------------------------------    -->
+    <section class="section projects">
+        <div class="container">
+        <div class="e">
+            <h2>Projects</h2>
+            <ul class="description">
+                 <h3>Clone Website</h3>
+                 <p>clone the below 3 different style websites to show that I can built a website that meet exactly same as customers' need all by myself.(off course the code is totolly different from the original one) </p> 
+            </ul>
+            <div class="cards">
+                <div class="card">
+                <a href="https://preview.c9users.io/tolisacoding/japanesefood/jpfood.html?_c9_id=livepreview0&_c9_host=https://ide.c9.io" target="_blank">
+                    <img src="img/jpfood.jpg" alt="定食8" style="width:100%">
+                    <div class="title"><i>Clone Website: 定食8</i></div> 
+                        <div class="description">  
+                            <i class="fas fa-paw"></i>HTML, CSS, Javascript<br>
+                            <i class="fas fa-paw"></i>RWD for any size of monitor/device<br>
+                            <i class="fas fa-paw"></i>Include Swiper API for touch slider effect<br>
+                            <i class="fas fa-paw"></i>CSS grid for responsive layouts<br>
+                            <i class="fas fa-paw"></i>Animation: swiper, fadding, autoplay, overlay, responsive navigation effect <br>
+                        </div>  
+                 </a>
+                </div>
+                <div class="card">
+                <a href="https://preview.c9users.io/tolisacoding/clone-stadium/stadium.html" target="_blank">
+                    <img src="img/stadium.jpg" alt="板樹體育館" style="width:100%">
+                    <div class="title"><i>Clone Website: 板樹體育館</i></div> 
+                        <div class="description">  
+                            <i class="fas fa-paw"></i>HTML, CSS, Javascript<br>
+                            <i class="fas fa-paw"></i>Include Swiper API for touch slider effect<br>
+                            <i class="fas fa-paw"></i>CSS grid for responsive layouts<br>
+                            <i class="fas fa-paw"></i>Animation: swiper, fadding, autoplay, responsive navigation effect <br>
+                        </div>  
+                 </a>
+                </div>
+                <div class="card">
+                <a href="https://preview.c9users.io/tolisacoding/tcmc/tcmc.html" target="_blank">
+                    <img src="img/tmc.jpg" alt="台積電" style="width:100%">
+                        <div class="title"><i>Clone Website: 台積電</i></div> 
+                        <div class="description">  
+                            <i class="fas fa-paw"></i>Pure HTML, CSS, Javascript<br>
+                            <i class="fas fa-paw"></i>no responsive layouts<br>
+                            <i class="fas fa-paw"></i>Animation: fadding, autoplay effect <br>
+                        </div>  
+                 </a>
+                </div>
+        </div>
+            <ul class="description">
+                 <h3>creative websites</h3>
+                 <p>I create the below website including the UI/UX design and coding</p> 
+            </ul>
+            <div class="cards">
+                <div class="card">
+                <a href="https://lisawcoding.github.io/ecommerce/index.html" target="_blank">
+                        <img src="img/ecommerce.jpg" alt="index paper website" style="width:100%">
+                        <div class="title"><i>ecommerce</i></div> 
+                        <div class="description">  
+                            <i class="fas fa-paw"></i>with shopping cart function<br>
+                            <i class="fas fa-paw"></i>use json file for the products detials<br>
+                            <i class="fas fa-paw"></i>localStorage function<br>
+                            <i class="fas fa-paw"></i>3 html<br>
+                            <i class="fas fa-paw"></i>RWD for pc, tablet, and mobile<br>
+                        </div>  
+                 </a>                    
+                </div>
+
+             <div class="card">
+                <a href="https://preview.c9users.io/tolisacoding/resume/resume.html?_c9_id=livepreview1&_c9_host=https://ide.c9.io" target="_blank">
+                        <img src="img/index1.jpg" alt="index paper website" style="width:100%">
+                        <div class="title"><i>Index Paper Website</i></div> 
+                        <div class="description">  
+                            <i class="fas fa-paw"></i>Its responsive width any size of device/screem, with audio effect.<br>
+                            <i class="fas fa-paw"></i>CSS builted computer/tablet/mobile shape, and changed when resize<br>
+                            <i class="fas fa-paw"></i>use iframe tag to embed the wesite<br>
+                            <i class="fas fa-paw"></i>with audio effect when click<br>
+                            <i class="fas fa-paw"></i>3D cartoon style<br>
+                        </div>  
+                 </a>
+                </div>
+            </div>
+            <div class="c">
+            <h2>作品集</h2>             
+            <ul class="description">
+                 <h3>COPY3種不同樣式的網頁</h3>
+                 <p>作品先做了3個不同樣式的網頁首頁，一模一樣，顯示出我可以完全的建造出客戶要的網頁，可應付各種不同版型／效果，遇到新的網頁效果也有辦法自行找出方法做出來</p>
+            </ul>
+            <div class="cards">
+                <div class="card">
+                <a href="https://preview.c9users.io/tolisacoding/japanesefood/jpfood.html?_c9_id=livepreview0&_c9_host=https://ide.c9.io" target="_blank">
+                    <img src="img/jpfood.jpg" alt="定食8" style="width:100%">
+                    <div class="title"><i>定食8</i></div> 
+                        <div class="description">  
+                            <i class="fas fa-paw"></i>使用HTML, CSS, Javascript，不需Bootstrap<br>
+                            <i class="fas fa-paw"></i>RWD網頁，配合各種尺吋的裝置螢幕<br>
+                            <i class="fas fa-paw"></i>使用Swiper 框架，用於Slider的效果，包括手滑效果<br>
+                            <i class="fas fa-paw"></i>使用CSS grid, flex於RWD網頁切版<br>
+                            <i class="fas fa-paw"></i>網頁效果有: 手滑swiper, 淡入淡出fadding, 自動播放／手選播放autoplay, 浮覆蓋層overlay, 互動導覽列responsive navigation effect...等<br>
+                        </div>  
+                 </a>
+                </div>
+                <div class="card">
+                <a href="https://preview.c9users.io/tolisacoding/clone-stadium/stadium.html" target="_blank">
+                    <img src="img/stadium.jpg" alt="板樹體育館" style="width:100%">
+                    <div class="title"><i>板樹體育館</i></div> 
+                        <div class="description">  
+                            <i class="fas fa-paw"></i>純HTML, CSS, Javascript，不需Bootstrap<br>
+                            <i class="fas fa-paw"></i>RWD網頁，配合各種尺吋的裝置螢幕<br>
+                            <i class="fas fa-paw"></i>CSS grid 於RWD網頁切版<br>
+                            <i class="fas fa-paw"></i>網頁效果有：淡入淡出fadding, 自動播放／手選播放autoplay,  互動導覽列responsive navigation effect...等<br>
+                        </div>  
+                 </a>
+                </div>
+                <div class="card">
+                <a href="https://preview.c9users.io/tolisacoding/tcmc/tcmc.html" target="_blank">
+                    <img src="img/tmc.jpg" alt="台積電" style="width:100%">
+                    <div class="title"><i>台積電</i></div> 
+                        <div class="description">  
+                            <i class="fas fa-paw"></i>純HTML, CSS, Javascript，無任何框架<br>
+                            <i class="fas fa-paw"></i>此網站無RWD<br>
+                            <i class="fas fa-paw"></i>Animation: 淡入淡出fadding, 自動播放／手選播放autoplay <br>
+                        </div>  
+                 </a>
+                </div>
+            </div>
+            <ul class="description">
+                 <h3>創作的作品集</h3>
+                 <p>自已創作的作品，從UI、UX到寫程式</p> 
+            </ul>
+            <div class="creative-project">
+                <h3>Creative Website</h3>
+                    <p>純HTML/CSS/Javascript,沒用任何框架</p>
+
+                    <div class="cards">
+
+                 <div class="card">
+                <a href="https://lisawcoding.github.io/ecommerce/index.html" target="_blank">
+                        <img src="img/ecommerce.jpg" alt="index paper website" style="width:100%">
+                        <div class="title"><i>線上網物網站</i></div> 
+                        <div class="description">  
+                            <i class="fas fa-paw"></i>有購物車功能<br>
+                            <i class="fas fa-paw"></i>使用json代入產品資料<br>
+                            <i class="fas fa-paw"></i>localStorage功能存取購買資料<br>
+                            <i class="fas fa-paw"></i>連結3個頁面<br>
+                            <i class="fas fa-paw"></i>RWD電腦、平板、手機視覺<br>
+                        </div>  
+                 </a>                    
+                </div>
+                                         <div class="card">
+                <a href="https://preview.c9users.io/tolisacoding/resume/resume.html?_c9_id=livepreview1&_c9_host=https://ide.c9.io" target="_blank">
+                        <img src="img/index1.jpg" alt="index paper website" style="width:100%">
+                        <div class="title"><i>書簽樣式網頁</i></div> 
+                        <div class="description">  
+                            <i class="fas fa-paw">RWD網頁，適用任何尺吋螢幕／裝置</i><br>
+                            <i class="fas fa-paw">用CSS畫出手機／平板／電腦的圖形，隨螢幕大小改變樣式</i><br>
+                            <i class="fas fa-paw">用iframe連結螢幕，模擬</i><br>
+                            <i class="fas fa-paw">加了按鍵聲效互動</i><br>
+                            <i class="fas fa-paw">立體卡通圖形</i><br>
+                        </div>  
+                 </a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    </section> 
+    
+    <section class="section contact">
+        <div class="container">
+            <h2 class="e">Contact Me</h2>
+            <h2 class="c">連繫我</h2>
+            <div class="icons">
+               <a href="mailto:tolisacoding@gmail.com" rel="nofollow" target="_blank">
+                  <img src="img/icon/gmail.png" alt="gmail"></img>
+                </a>
+                   <a href="http://line.me/ti/p/@bqk1207g" rel="nofollow" target="_blank">
+                   <img src="img/icon/line.png" alt="line"></img>
+                </a>
+                <a href="skype:lisa.wang27?call">
+                    <img src="img/icon/skype.png" alt="skype"></img>
+                </a>
+            </div>
+        
+            <h3 class="e">If you are interested in my projects, please feel free to contact with me.</h3>
+            <h3 class="c">如果你對我的作品有興趣，歡迎與我連繫，謝謝您...</h3>
+            
+
+             <div class="contact-info">
+                 <div class="e"><i class="fas fa-map-marker-alt"></i>New Taipei City, Taiwan</div>
+                 <div class="c"><i class="fas fa-map-marker-alt"></i>台灣新北市板橋區</div>
+                 <div><i class="fas fa-phone"></i>+886 908117599</div>
+                 <div><i class="fas fa-envelope"></i>tolisacoding@gmail.com </div>                                
+             </div>
+            
+             <form id="contact-form">
+                <div>
+                    <label for="name" class="e">Your Name</label>
+                    <label for="name" class="c">姓名</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name.." required>
+                    <!--<input type="text" id="name" name="name" placeholder="您的名子.." required class="c">-->
+                </div>
+                <div>
+                    <label for="phone" class="e">Your Phone Number</label>
+                    <label for="phone" class="c">電話號碼</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number..">
+                </div>
+                <div>
+                    <label for="email" class="e">Your e-mail</label>
+                    <label for="email" class="c">e-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your e-mail.." required>
+                </div>
+                <div>
+                    <label for="message" class="e">Message</label>
+                    <label for="message" class="c">留言</label>
+                    <input type="text" id="message" name="message" placeholder="Message...">
+                </div>
+                <div class="check-number">
+                     <div class="a"></div><span>+</span><div class="b"></div><spn>=</spn><input class="sum" type="number" value="Sum" placeholder="Sum">
+                </div>
+                <div>
+                   <input type="submit" value="Submit" class="submit e"> 
+                   <input type="submit" value="確認" class="submit c"> 
+                </div>
+                <div class="alert-ok">
+                    Your message has been sent
+                </div>
+                <div class="alert-ng">
+                    Wrong code, try again please
+                </div>                
+             </form>
+        </div>
+    </section>
+    
+    <div class="container" style="position:relative"><div class="banner"></div></div>
+
+    </main>   
+        <div id="topBtn" class="overlay"  onclick="goToTop()">
+            <i class="fas fa-sort-up"></i>
+        </div>
+        
+        
+        
+<!--audio^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^-->
+<audio class="game">
+  <source src="audio/game.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+<script type="text/javascript" src="resume.js"></script>
+</body>
+</html>
