@@ -388,6 +388,12 @@ i{
 .description{
     padding-left: 0;
 }
+.cards.creative {
+	justify-content: flex-start;
+}
+.cards.creative card {
+	margin-left: .23rem;
+}
 
 
 
