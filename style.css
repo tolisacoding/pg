@@ -219,6 +219,9 @@ h3{
 .projects h3{
     display: inline-block;
 }
+.projects img {
+    width: 100%;
+}
 .cards {
     display: grid;
     grid-gap: 10px;
