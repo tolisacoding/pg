@@ -117,8 +117,8 @@
             },
             "cards": [
                 {
-                    "img": "img/icon/github.png",
-                    "link": "https://lisawcoding.github.io/ecommerce/index.html",
+                    "img": "img/ecommerce.JPG",
+                    "link": "img/",
                     "en": 
                         {   
                             "title": "e-coomerce/online shopping mall",
@@ -145,7 +145,7 @@
                         }
                 },
                 {
-                    "img": "img/icon/github.png",
+                    "img": "img/api.png",
                     "link": "https://lisawcoding.github.io/api/",
                     "en": 
                         {
@@ -171,7 +171,7 @@
             },
             "cards": [
                 {
-                    "img": "img/icon/github.png",
+                    "img": "img/jpfood.jpg",
                     "link": "https://lisawcoding.github.io/clone-japanese-food/", 
                     "en": 
                         {   
@@ -193,7 +193,7 @@
                         }
                 },
                 {
-                    "img": "img/icon/github.png",
+                    "img": "img/stadium.jpg",
                     "link": "https://lisawcoding.github.io/clone-stadium/",
                     "en": 
                         {
@@ -215,7 +215,7 @@
                         }
                 },
                 {
-                    "img": "img/icon/github.png",
+                    "img": "img/tmc.jpg",
                     "link": "https://lisawcoding.github.io/clone-tcmc/",
                     "en": 
                         {
@@ -235,7 +235,7 @@
                         }
                 },
                 {
-                    "img": "img/icon/github.png",
+                    "img": "img/index1.jpg",
                     "link": "https://lisawcoding.github.io/index-paper/",
                     "en": 
                         {

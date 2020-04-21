@@ -52,7 +52,7 @@ function translate(){
 				y.querySelectorAll("a")[i].href=data.projects[n].cards[i].link;
 				// y.querySelectorAll("iframe")[i].src=data.projects[n].cards[i].link;
 				y.querySelectorAll("img")[i].src=data.projects[n].cards[i].img;
-				y.querySelectorAll("img")[i].alt=eval(`data.projects[n].cards[i].${lan}.title`);
+				y.querySelectorAll("img")[i].alt=eval(`data.projects[n].cards[i].${lan}.title`)+"image";
 				y.querySelectorAll(".title")[i].innerText=eval(`data.projects[n].cards[i].${lan}.title`);
 
 				var number=(eval(`data.projects[n].cards[i].${lan}.des`).length);
