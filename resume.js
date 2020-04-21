@@ -50,9 +50,9 @@ function translate(){
 				y.querySelector(".cards").insertBefore(cardCln, y.querySelector(".clone"))
 
 				y.querySelectorAll("a")[i].href=data.projects[n].cards[i].link;
-				y.querySelectorAll("iframe")[i].src=data.projects[n].cards[i].link;
-				// y.querySelectorAll("img")[i].src=data.projects[n].cards[i].img;
-				// y.querySelectorAll("img")[i].alt=eval(`data.projects[n].cards[i].${lan}.title`);
+				// y.querySelectorAll("iframe")[i].src=data.projects[n].cards[i].link;
+				y.querySelectorAll("img")[i].src=data.projects[n].cards[i].img;
+				y.querySelectorAll("img")[i].alt=eval(`data.projects[n].cards[i].${lan}.title`);
 				y.querySelectorAll(".title")[i].innerText=eval(`data.projects[n].cards[i].${lan}.title`);
 
 				var number=(eval(`data.projects[n].cards[i].${lan}.des`).length);
@@ -376,8 +376,4 @@ function goToTop() {
 // })
 // removeRule();
 
-
-document.querySelector("iframe").contentWindow.document.querySelector(".width-1200").style.maxWidth="unset";
-document.querySelector("iframe").contentWindow.document.querySelector(".width-1200").style.width="100%";
-document.querySelector("iframe").contentWindow.document.head.querySelector("meta[name*='view']").content="width=1260"
 
