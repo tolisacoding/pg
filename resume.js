@@ -17,9 +17,12 @@ function translate(){
 		console.log(data.description);
 
 		// document.querySelector(".lan").innerText=navigator.language+"&"+lan;
-		document.querySelectorAll("*[data-lan]").forEach(function(elm){
-			elm.innerHTML=eval(`data.${elm.dataset.lan}.${lan}`);
-		})	
+		// document.querySelectorAll("*[data-lan]").forEach(function(elm){
+		// 	elm.innerHTML=eval(`data.${elm.dataset.lan}.${lan}`);
+		// })
+		document.querySelectorAll("*[data-lan").forEach(function(elm){
+			elm.innerText=eval(`data.${elm.dataset.lan}.${lan}`);
+		})
 		document.querySelector("*[data-lan='submit']").value=eval(`data.submit.${lan}`);
 		document.querySelectorAll("*[data-list]").forEach(function(elm){
 			elm.innerHTML="";
@@ -97,9 +100,10 @@ function runProject(){
 	})
 	translate();
 }
-document.querySelectorAll(".language-container li").forEach(function(li){
+document.querySelectorAll(".language-container li:not([class*=hamburger])").forEach(function(li){
 	li.addEventListener("click", function(){
 		for(let sibling of this.parentNode.children){
+			console.log(this.parentNode.children);
 			sibling.classList.remove("active");
 		}
 		this.classList.add("active");
