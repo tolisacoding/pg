@@ -68,6 +68,15 @@ function translate(){
 			}
 			y.querySelector(".card.clone").remove();
 		})
+
+		document.querySelectorAll("*[class='description'] li").forEach(function(li){
+			var div=document.createElement("i");
+			var parent=li.parentNode;
+			parent.replaceChild(div, li);
+			div.appendChild(li);
+
+			div.setAttribute("class", "fas fa-paw");
+		})
 	})
 	.catch(function(err) {
 		console.log(err);
@@ -80,8 +89,6 @@ translate();
 let hamburger=document.querySelector(".hamburger");
 let navbar=document.querySelector(".navbar");
 let navItemContainer=document.querySelector(".navItem-container");
-let en=document.querySelector("#en");
-let zh=document.querySelector("#zh");
 
 document.querySelector(`#${lan}`).classList.add("active");
 function runProject(){
@@ -90,23 +97,23 @@ function runProject(){
 	})
 	translate();
 }
-en.addEventListener("click", function(){
-	zh.classList.remove("active");
-	this.classList.add("active");
-	lan="en";
-	runProject();
+document.querySelectorAll(".language-container li").forEach(function(li){
+	li.addEventListener("click", function(){
+		for(let sibling of this.parentNode.children){
+			sibling.classList.remove("active");
+		}
+		this.classList.add("active");
+		lan=this.id;
+		runProject();
+	})
 })
-zh.addEventListener("click", function(){
-	en.classList.remove("active");
-	this.classList.add("active");
-	lan="zh";
-	runProject();
-})
+
+
 
 
 //navbar active seleted
-let sections=document.querySelectorAll("section");
 let navItems=document.querySelectorAll(".navItem");
+let sections=document.querySelectorAll("section");
 
 function removeActive(){
 	for(var i=0; i<navItems.length; i++){
@@ -151,7 +158,6 @@ function clickNav(n){
 //hambuerger
 hamburger.addEventListener("click", function(){
 	navItemContainer.classList.toggle("show");
-	// hamburger.classList.toggle("active");
 	this.classList.toggle("change");
 })
 //id photo slider*************************************************************************
@@ -327,6 +333,8 @@ function goToTop() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+
+
     // var swiper = new Swiper('body', {
     //   slidesPerView: 1,
     // });
@@ -375,5 +383,3 @@ function goToTop() {
 //     resetCSSMedia();
 // })
 // removeRule();
-
-
