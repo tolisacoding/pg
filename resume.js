@@ -15,11 +15,6 @@ function translate(){
 	})
 	.then(function(data){
 		console.log(data.description);
-
-		// document.querySelector(".lan").innerText=navigator.language+"&"+lan;
-		// document.querySelectorAll("*[data-lan]").forEach(function(elm){
-		// 	elm.innerHTML=eval(`data.${elm.dataset.lan}.${lan}`);
-		// })
 		document.querySelectorAll("*[data-lan").forEach(function(elm){
 			elm.innerText=eval(`data.${elm.dataset.lan}.${lan}`);
 		})
@@ -146,14 +141,12 @@ window.addEventListener("scroll",function(){
 
 //navItem active on click	
 function clickNav(n){
-	// sections[n].scrollIntoView({behavior:'smooth'});
 	window.scrollTo(0, sections[n].offsetTop-navbar.offsetHeight+1);
 	document.querySelector(".game").play();
 	
 	if(window.getComputedStyle(hamburger).getPropertyValue("display")=="flex"){
 		navItemContainer.classList.remove("show");
 		hamburger.classList.remove("change");
-		// hamburger.classList.remove("active");
 	}
 	removeActive();
 	navItems[n].classList.add("active");
@@ -279,45 +272,43 @@ sum.addEventListener("keyup", function(){
 	console.log(1);
 	if(Number(document.querySelector(".sum").value)==a+b){
 	console.log("correct");
-	document.querySelector(".submit").style.background="var(--brown)";
-	document.querySelector(".submit").style.color="#f2f2f2";
+	document.querySelector("input[type*='submit']").classList.add("submit");
 	answer=true;
 } else {
 	answer=false;
 }
 })
+
+
+
 // function to get form value
-document.querySelector("#contact-form").addEventListener("submit",function(e){
+let ok=document.querySelector(".alert-ok");
+let ng=document.querySelector(".alert-ng");
+
+document.querySelector("form").addEventListener("submit",function(e){
 	e.preventDefault();//sent to html page by default
 	if(answer==true){
-	// get value
-	var name=document.querySelector("#name").value;
-	var phone=document.querySelector("#phone").value;
-	var email=document.querySelector("#email").value;
-	var message=document.querySelector("#message").value;
-	
-	//save message
-	saveMessage(name, phone, email, message)
-	// show alert
-	document.querySelector(".alert-ok").style.display="block";
-	//clear form input
-	document.querySelector("#contact-form").reset();		
+				var name=document.querySelector("form *[name*='name']");
+		var phone=document.querySelector("form *[name*='phone']");
+		var message=document.querySelector("form *[name*='message']");
+		
+		saveMessage(name, phone, message)
+		ok.classList.add("alert-active");
+		this.reset();		
 	} else {
-		document.querySelector(".alert-ng").style.display="block";
+		ng.classList.add("alert-active");
 	}
 	setTimeout(function(){
-		document.querySelector(".alert-ok").style.display="none";
-		document.querySelector(".alert-ng").style.display="none";
+		ok.classList.remove("alert-active");
+		ng.classList.remove("alert-active");
 	},3000)
 })
-
-function saveMessage(name, email, phone, message){
+function saveMessage(name, phone, message){
 	var newMessageRef=messagesRef.push();
 	newMessageRef.set({
-		name:name,
-		phone:phone,
-		email:email,
-		message:message,
+		name:name.value,
+		phone:phone.value,
+		message:message.value,
 	})
 }
 
@@ -336,54 +327,3 @@ function goToTop() {
 	document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-
-
-
-    // var swiper = new Swiper('body', {
-    //   slidesPerView: 1,
-    // });
-// var mediaElem=document.querySelector(".main2 .computer").contentWindow.document.getElementsByTagName("*");
-
-// var x=window.matchMedia("(max-width:791px)");
-
-// function resetCSSMedia(){
-//     if(x.matches){
-//         // mediaElem.removeAttribute();
-//         removeRule();
-//         // mediaElem.removeAttribute('style');
-//     }
-// }
-
-// function removeRule() {
-//     if(typeof window.CSSMediaRule !== "function") 
-//         return false; //Your browser doesn't support media query feature
-
-//     var s = document.styleSheets, r,
-//         i, j, k;
-
-//     if(!s) return false; //no style sheets found
-
-//     // walk throuth css sheets
-//     for(i=0; i<s.length; i++) {
-//         // get all rules
-//         r = s[i].cssRules; 
-//         if(!r) continue;
-
-//         for(j=0; j<r.length; j++) {
-//             //If there's a rule for media query
-//             if(r[j] instanceof CSSMediaRule &&
-//                     r[j].media.mediaText == "only screen and (min-width: 600px)") {
-//                 for(k=0; k<r[j].cssRules.length; k++) {
-//                     // remove all rules of it
-//                     r[j].deleteRule(r[j].cssRules[k]);
-//                 }
-//                 return true;
-//             }
-//         }
-//     }
-// }
-// window.addEventListener("load", function(){
-//     removeRule();
-//     resetCSSMedia();
-// })
-// removeRule();

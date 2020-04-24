@@ -88,8 +88,8 @@
         "zh": "2019作品: 開發新網頁"
     },
     "alert_ok": {
-        "en": "Your message has been sent",
-        "zh": "你的資料已送出"
+        "en": "Your message has been sent, Thank you．",
+        "zh": "你的資料已送出, 謝謝您~"
     },
     "alert_ng": {
         "en": "Wrong code, try again please",

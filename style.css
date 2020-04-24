@@ -50,7 +50,7 @@ nav .hamburger{
 nav .hamburger div {
     width: 20px;
     height: 2px;
-    background: grey;
+    background: var(--white);
     border-radius: 5px;
     transition: all .2s;
 }
@@ -67,18 +67,10 @@ nav li{
     margin:auto 5px;
     text-align:center;
     font-weight: 200;
-        /* background-image: radial-gradient(black, transparent); */
-        /* background: linear-gradient(transparent, var(--brown), transparent); */
-            /* -webkit-text-fill-color: var(--black); */
-    /* -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--black); */
 }
 nav li:hover{
    color:#f2f2f2; 
-   /* background:var(--brown); */
    border:2px solid grey;
-   /* background: linear-gradient(transparent, var(--brown), transparent);
-   background: linear-gradient(transparent, var(--black), transparent); */
    transition: all .25s;
 }
 
@@ -179,13 +171,6 @@ h2{
     opacity: 1;
 }
 /*skills*************************************************************************************/
-
-/* .wrapper{
-    display: -webkit-flex;
-	display: flex;
-	-webkit-flex-wrap: wrap;
-	flex-wrap: wrap;
-} */
 h3{
     border-bottom: 3px solid var(--brown);
     padding:12px;
@@ -200,7 +185,6 @@ h3{
 .skills:hover{
     background-color: rgba(225, 225, 225, .5);
     color: var(--black);
-    /* text-shadow: 1px 1px 2px pink, 0 0 1em var(--white), 0 0 0.2em var(--white); */
 }
 .skills ul:not([data-list*='des']){
     display: flex;
@@ -214,15 +198,11 @@ h3{
     margin:5px;
     display: inline-block;
     background:var(--brown);
-            /* background-image: radial-gradient(black, transparent); */
-        background: linear-gradient(transparent, var(--brown), transparent);
-    /*border:2px solid grey;*/
+    background: linear-gradient(transparent, var(--brown), transparent);
     width: fit-content;
     opacity:1;
-    /* font-size: 1.5rem; */
     list-style-type: none;
     padding: 5px 20px;
-    /* border: 2px solid var(--white); */
     border-radius: 25px;
     margin: auto 5px;
     text-align: center;
@@ -232,7 +212,6 @@ h3{
 .skills ul:not([data-list*='des']) li:hover{
 }
 .skills:hover ul:not([data-list*="des"]) {
-    /* text-shadow: 1px 1px 2px pink, 0 0 1em var(--white), 0 0 0.2em var(--white); */
     font-weight: 900;
 }
 
@@ -329,72 +308,73 @@ box-shadow: 0px 1px 10px #999;
 }
 
 /*contact from^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
-/* .contact .contact-info{
-    display: flex;
-    justify-content:center;
-    margin:1rem auto;
-    align-items: center;
-} */
 .contact form{
     background-color: var(--white);
-    /* color:#f2f2f2; */
     opacity:0.72;
-    padding:1.5%;
     border-radius: 25px;
-    margin:0 auto;
-    text-align: center;
-    font-weight: 900;
-    font-size: 1.2rem;
-    color:var(--brown);
-    transition: all .2s;
-}
-.contact form div{
-    background:transparent;
-    margin:1rem auto;
+    margin: 0 auto;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5% 9%;
 }
-.contact input{
-    flex-grow:1;
-    padding:7px 12px;
+.contact input, .contact textarea {
+    padding:1.5%;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 0.9rem;
+    width: 100%;
+    margin-bottom: 1.5%;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    outline: none;
+    -webkit-appearance: none;
 }
-.contact input[name=message]{
-    padding-bottom: 200px;
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    color: var(--brown)
+}
+.contact textarea{
+    font-size: 1.6rem;
+    resize: vertical;
 }
 .contact input[type=submit] {
-  background-color: #f2f2f2;
-  color: var(--brown);
-  padding:12px 0;
-  font-size: 1.2rem;
-  font-weight: 900;
+    background-color: #f2f2f2;
 }
-.contact label{
-    padding:14px 20px;
+.alert {
+    width: 100%;
+    position: relative;
 }
-.contact .alert-ok,.contact .alert-ng{
-    flex-grow:1;
-    padding:7px 0;
+.alert-active {
+    opacity: 1 !important;
+}
+.contact .alert > div {
     border-radius: 5px;
-    background:#79c879;
-    color:var(--white);
-    margin-bottom: 10px;
-    display: none;
+    background: #79c879;
+    color: var(--white);
+    text-align: center;
+    transition: all 1.2s;
+    font-weight: 900;
+    width: 100%;
+    padding: 1.5%;
+    box-sizing: border-box;
+    opacity: 0;
 }
 .contact .alert-ng{
-    background-color: #c87979;
-}
+    background-color: #c87979 !important;
+    position: absolute;
+    top: 0;
+} 
+
 .contact .check-number{
     display: flex;
     justify-content:center;
-    font-size: 1.5rem;
     font-weight: 500px;
     align-items:center;
     width:62px;
-}
-.contact .check-number *{
-    margin:0 6px;
 }
 .contact .sum{
     border:var(--brown) 1px solid;
@@ -403,14 +383,6 @@ box-shadow: 0px 1px 10px #999;
     text-align: center;
     width:90px;
 }
-/* .contact h3{
-    padding-top: 0;
-    margin-top: 0;
-    text-align: center;
-} */
-/* .contact .contact-info{
-    font-size: 1rem;
-} */
 img[src*="github"]{
     width:3.7rem;
     float:right;
@@ -431,13 +403,6 @@ img[src*="github"]:hover {
     text-align: center;
     margin-bottom: 1rem;
 }
-/* .contact .icons img{
-    color: #f2f2f2;
-    background:grey;
-    border: 2px solid var(--brown);
-    border-radius: 50%;
-    padding:0.3rem;
-} */
 /*others^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
 
 .description{
@@ -456,31 +421,11 @@ img[src*="github"]:hover {
     .cards {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
-    /* .contact .contact-info{
-        flex-direction:column;
-        text-align: center
-    } */
     .contact i {
         line-height: unset;
     }
     .projects h3 {
         width: 100%;
-    }
-    .contact form{
-        max-width: 90%;
-    }
-    .contact form div{
-        flex-direction:column;
-        width:92%;
-    }
-    .contact label{
-        padding:0;
-    }
-    .contact input[name=message]{
-        padding-bottom: 120px;
-    }
-    .contact .check-number{
-        flex-direction:row;
     }
     #topBtn{
         right: 1rem;
@@ -561,9 +506,6 @@ img[src*="github"]:hover {
     .projects h3{
         width:95%;
     }
-    /* .contact .icons img{
-    	width:2rem;
-    } */
 }
 
 /*classList/////////////////////////////////////////////////////////////////////////////*/
@@ -577,8 +519,10 @@ img[src*="github"]:hover {
    border:2px solid grey;
 }
 .submit{
-    background:var(--brown);
-    color:#f2f2f2;
+    background:var(--brown) !important;
+    color:#f2f2f2 !important;
+    background: green;
+    font-weight: 900;
 }
 .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
@@ -586,32 +530,16 @@ img[src*="github"]:hover {
     position: absolute;
     top: 50%;
   }
-  .change .bar2 {opacity: 0;}
-  
-  .change .bar3 {
+.change .bar2 {opacity: 0;}
+.change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg);
     position: absolute;
     top: 50%;
-  }
-
+}
 .card {
     position: relative;
 }
-  /* .iframe-wrapper {
-      position: relative;
-      padding-top: 70%;
-  } */
-  /* iframe {
-    width:100%;
-    height:100%;
-    pointer-events: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  } */
-
   *[class*="paw"] {
       display: flex;
   }
