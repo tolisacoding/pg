@@ -521,6 +521,9 @@ img[src*="github"]:hover {
         justify-content: center;
         align-items: center;
     }
+    section:not(.coverletter) {
+        padding-bottom: 11% !important;
+    }
 }
 
 /*classList/////////////////////////////////////////////////////////////////////////////*/
