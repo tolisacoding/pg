@@ -14,7 +14,6 @@ function translate(){
 		return res.json();
 	})
 	.then(function(data){
-		console.log(data.description);
 		document.querySelectorAll("*[data-lan").forEach(function(elm){
 			elm.innerText=eval(`data.${elm.dataset.lan}.${lan}`);
 		})
@@ -28,7 +27,6 @@ function translate(){
 		})
 
 		for(var i=0; i<data.projects.length; i++){
-			console.log(data.projects[i].cards[0]);
 			
 			var yearCln=document.querySelector(".year").cloneNode(true);
 			yearCln.setAttribute("class", "year");
@@ -141,11 +139,12 @@ window.addEventListener("scroll",function(){
 
 //navItem active on click	
 function clickNav(n){
-	window.scrollTo(0, sections[n].offsetTop-navbar.offsetHeight+1);
+	// window.scrollTo(0, sections[n].offsetTop-navbar.offsetHeight+1);
+	window.scrollTo(0, sections[n].offsetTop-52);
 	document.querySelector(".game").play();
 	
 	if(window.getComputedStyle(hamburger).getPropertyValue("display")=="flex"){
-		navItemContainer.classList.remove("show");
+		navItemContainer.classList.remove("drop-down");
 		hamburger.classList.remove("change");
 	}
 	removeActive();
@@ -154,7 +153,7 @@ function clickNav(n){
 
 //hambuerger
 hamburger.addEventListener("click", function(){
-	navItemContainer.classList.toggle("show");
+	navItemContainer.classList.toggle("drop-down");
 	this.classList.toggle("change");
 })
 //id photo slider*************************************************************************
@@ -200,16 +199,33 @@ let prev=document.querySelector(".prev");
 var slides=document.querySelectorAll(".id-photo img");
 let current=0;
 
-function remove(){
+
+let n=0;
+
+function reset(){
     for(var i=0; i<dots.length; i++){
         dots[i].classList.remove("dot-active");
         slides[i].classList.remove("slide-active");
     }
 }
+function runSlides(){
+	if(current<dots.length-1){
+		current++;
+	} else {
+		current=0;
+	}    
+	reset();
+	dots[current].classList.add("dot-active");  
+	slideAction();  
+}
+
+setInterval(function(){
+	runSlides();
+}, 3200)
+
 function slideAction(){
     for(var i=0; i<dots.length; i++){
         if(dots[i].classList.contains("dot-active")){
-            console.log(slides[i]);
             slides[i].classList.add("slide-active");
             current=i;
         }
@@ -217,20 +233,13 @@ function slideAction(){
 }
 dots.forEach(function(dot){
     dot.addEventListener("click", function(){
-        remove();
+        reset();
         this.classList.add("dot-active");
         slideAction();
     })
 })
 next.addEventListener("click", function(){
-    if(current<dots.length-1){
-        current++;
-    } else {
-        current=0;
-    }    
-    remove();
-    dots[current].classList.add("dot-active");  
-    slideAction();  
+	runSlides();
 })
 prev.addEventListener("click", function(){
     if(current<=0){
@@ -238,7 +247,7 @@ prev.addEventListener("click", function(){
     } else {
         current--;
     }    
-    remove();
+    reset();
     dots[current].classList.add("dot-active");    
     slideAction();
 })
@@ -327,3 +336,6 @@ function goToTop() {
 	document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+// loader6^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+window.onload = function(){ document.querySelector(".loader-wrapper").style.display = "none" }

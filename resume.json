@@ -37,6 +37,7 @@
     },
     "description": {
         "en": [
+            "React: Hooks, Contect, Router...etc",
             "Strong in HTML5, CSS, Javascript",
             "Proficien Responsive Website Deign, flex, grid",
             "Expert in front-end frameworks-jQery, Boostrap, swiper, sementic UI",
@@ -45,6 +46,7 @@
             "problem solving: Stackoverflow, MDN, W3Schools"
             ],
         "zh": [
+            "使用React: Hooks, Context, Router",
             "熟悉 HTML5 & CSS3，能夠解決跨瀏覽器的相容性",
             "熟悉 flexbox, CSS grid 的切版方式，應用RWD網頁，手機、電腦，平面各尺吋",
             "熟悉 CSS framework，API，如 Bootstrap,Swiper",
@@ -97,12 +99,14 @@
     },
     "topic": {
         "en": [
+            "React",
             "HTML",
             "CSS/SASS",
             "Javascript",
             "jQuery"
         ],
         "zh": [
+            "React",
             "HTML",
             "CSS/SASS",
             "Javascript",
@@ -110,6 +114,38 @@
         ]
     },
     "projects": [
+        {
+            "year": {
+                "en": "Projects of the Year 2020",
+                "zh": "2020年作品"
+            },
+            "cards": [
+                {
+                    "img": "img/poke.png",
+                    "link": "https://lisawcoding.github.io/pokegame/",
+                    "en": 
+                        {   
+                            "title": "Pokemon Game",
+                            "des": [
+                                "use React, Hooks, Context, Router",
+                                "use PokéAPI to get pokemon data",
+                                "game and score sheet function",
+                                "style using SASS"
+                            ]
+                        },
+                    "zh":
+                        {
+                            "title": "寶可夢電腦遊戲",
+                            "des": [
+                                "用React, Hooks, Context, Router",
+                                "連接寶可夢API",
+                                "遊戲及遊戲單",
+                                "用SASS"
+                            ]
+                        }
+                }
+            ]
+        },
         {
             "year": {
                 "en": "Projects of the Year 2019",
@@ -123,8 +159,9 @@
                         {   
                             "title": "e-coomerce/online shopping mall",
                             "des": [
+                                "build a online website with Vanilla JavaScript",
                                 "with shopping cart function",
-                                "get Json products detials",
+                                "get products detials from JSON file",
                                 "zoom in function for product details, swiper function, autoplay function",
                                 "localStorage function for store shopping cart products",
                                 "3 html pages redirect pages",
