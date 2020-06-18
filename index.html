@@ -14,19 +14,19 @@
    <body>
       <nav class="navbar">
          <div class="container">
-            <div class="navItem-container">
+            <ul class="navItem-container">
                <li class="navItem active" onclick="clickNav(0)" data-lan="intro"></li>
                <li class="navItem" onclick="clickNav(1)" data-lan="skills"></li>
                <li class="navItem" onclick="clickNav(2)" data-lan="project"></li>
                <li class="navItem" onclick="clickNav(3)" data-lan="contact"></li>
-            </div>
+            </ul>
             <div class="language-container">
                <li id="zh" >文</li>
                <li id="en">A</li>
                <li class="hamburger">
-                  <div class="bar1"></div>
-                  <div class="bar2"></div>
-                  <div class="bar3"></div>
+                  <span class="bar1"></span>
+                  <span class="bar2"></span>
+                  <span class="bar3"></span>
                </li>
             </div>
          </div>
@@ -138,6 +138,7 @@
          <source src="audio/game.mp3" type="audio/mpeg">
          Your browser does not support the audio element.
       </audio>
+      <div class='loader-wrapper'><div class='loader'></div></div>
 
       <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
       <script type="text/javascript" src="resume.js"></script>
