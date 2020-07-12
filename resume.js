@@ -26,53 +26,73 @@ function translate(){
 			}
 		})
 
-		for(var i=0; i<data.projects.length; i++){
-			
-			var yearCln=document.querySelector(".year").cloneNode(true);
-			yearCln.setAttribute("class", "year");
-			yearCln.setAttribute("data-no", i);
-			document.querySelector(".projects .container").insertBefore(yearCln, document.querySelector(".year.clone"));
+		// for(var i=0; i<data.projects.length; i++){
+		// 	var yearCln=document.querySelector(".year").cloneNode(true);
+		// 	yearCln.setAttribute("class", "year");
+		// 	yearCln.setAttribute("data-no", i);
+		// 	document.querySelector(".projects .container").insertBefore(yearCln, document.querySelector(".year.clone"));
+		// 	document.querySelector(".projects-div").insertBefore(yearCln, document.querySelector(".year.clone"));
+		// 	document.querySelectorAll(".year:not(.clone)")[i].querySelector("h3").innerText=eval(`data.projects[i].year.${lan}`);
+		// }
 
-			document.querySelectorAll(".year:not(.clone)")[i].querySelector("h3").innerText=eval(`data.projects[i].year.${lan}`);
+		// console.log(data.projects)
 
-		}
+		data.projects.map(p=>{
+				console.log(p)
+			p.cards.forEach(function(card){
+				console.log(p);
+				var cardCln=document.querySelector('.projects .clone').cloneNode(true);
+				const cardsDiv=document.querySelector('.cards-div');
+				cardCln.setAttribute('class', 'card');
+				cardsDiv.insertBefore(cardCln, cardsDiv.childNodes[0]);
 
-		document.querySelectorAll(".year:not(.clone)").forEach(function(y){
-			var n=Number(y.getAttribute("data-no"));
-			for(var i=0; i<data.projects[n].cards.length; i++){
-				var cardCln=y.querySelector(".clone").cloneNode(true);
-				cardCln.setAttribute("class", "card");
-				// cardCln.setAttribute("data-no", i);
-				y.querySelector(".cards").insertBefore(cardCln, y.querySelector(".clone"))
+				cardsDiv.querySelector('.card .year').innerText=eval(`p.year.${lan}`);
+				cardsDiv.querySelector('.card a').href=card.link;
+				cardsDiv.querySelector('.card img').src=card.img;
+				cardsDiv.querySelector('.card img').alt=eval(`card.${lan}.title`);
+				cardsDiv.querySelector('.card .title').innerText=eval(`card.${lan}.title`)
 
-				y.querySelectorAll("a")[i].href=data.projects[n].cards[i].link;
-				// y.querySelectorAll("iframe")[i].src=data.projects[n].cards[i].link;
-				y.querySelectorAll("img")[i].src=data.projects[n].cards[i].img;
-				y.querySelectorAll("img")[i].alt=eval(`data.projects[n].cards[i].${lan}.title`)+"image";
-				y.querySelectorAll(".title")[i].innerText=eval(`data.projects[n].cards[i].${lan}.title`);
-
-				var number=(eval(`data.projects[n].cards[i].${lan}.des`).length);
-				// console.log(number);
-				for(var a=0; a<number; a++){
-
+				eval(`card.${lan}.des`).map(d=>{
 					var node=document.createElement("li");
-					var nodetext=document.createTextNode((eval(`data.projects[n].cards[i].${lan}.des[a]`)));
-					
-					node.appendChild(nodetext);
-					y.querySelectorAll(".description")[i].appendChild(node);
-				}
-			}
-			y.querySelector(".card.clone").remove();
+					// node.setAttribute("class", "fas fa-paw");
+					var nodetext=document.createTextNode(d);
+					node.appendChild(nodetext);	
+					cardsDiv.querySelector(".card .description").appendChild(node);
+				})
+			})
 		})
+		cardsDiv.querySelector('.clone').remove();
 
-		document.querySelectorAll("*[class='description'] li").forEach(function(li){
-			var div=document.createElement("i");
-			var parent=li.parentNode;
-			parent.replaceChild(div, li);
-			div.appendChild(li);
+		// document.querySelectorAll(".year:not(.clone)").forEach(function(y){
+		// 	var n=Number(y.getAttribute("data-no"));
+		// 	for(var i=0; i<data.projects[n].cards.length; i++){
+		// 		var cardCln=y.querySelector(".clone").cloneNode(true);
+		// 		cardCln.setAttribute("class", "card");
+		// 		y.querySelector(".cards").insertBefore(cardCln, y.querySelector(".clone"))
 
-			div.setAttribute("class", "fas fa-paw");
-		})
+		// 		y.querySelectorAll("a")[i].href=data.projects[n].cards[i].link;
+		// 		y.querySelectorAll("img")[i].src=data.projects[n].cards[i].img;
+		// 		y.querySelectorAll("img")[i].alt=eval(`data.projects[n].cards[i].${lan}.title`)+"image";
+		// 		y.querySelectorAll(".title")[i].innerText=eval(`data.projects[n].cards[i].${lan}.title`);
+
+		// 		var number=(eval(`data.projects[n].cards[i].${lan}.des`).length);
+		// 		for(var a=0; a<number; a++){
+		// 			var node=document.createElement("li");
+		// 			var nodetext=document.createTextNode((eval(`data.projects[n].cards[i].${lan}.des[a]`)));
+		// 			node.appendChild(nodetext);
+		// 			y.querySelectorAll(".description")[i].appendChild(node);
+		// 		}
+		// 	}
+		// 	y.querySelector(".card.clone").remove();
+		// })
+		// document.querySelectorAll("*[class='description'] li").forEach(function(li){
+		// 	var div=document.createElement("i");
+		// 	var parent=li.parentNode;
+		// 	parent.replaceChild(div, li);
+		// 	div.appendChild(li);
+
+		// 	div.setAttribute("class", "fas fa-paw");
+		// })
 	})
 	.catch(function(err) {
 		console.log(err);
@@ -88,8 +108,11 @@ let navItemContainer=document.querySelector(".navItem-container");
 
 document.querySelector(`#${lan}`).classList.add("active");
 function runProject(){
-	document.querySelectorAll(".year:not(.clone)").forEach(function(y){
-		y.remove();
+	// document.querySelectorAll(".year:not(.clone)").forEach(function(y){
+	// 	y.remove();
+	// })
+	document.querySelectorAll('.cards-div .card').forEach(function(card){
+		card.remove();
 	})
 	translate();
 }
@@ -338,4 +361,4 @@ function goToTop() {
 }
 
 // loader6^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-window.onload = function(){ document.querySelector(".loader-wrapper").style.display = "none" }
+// body.onload = function(){ document.querySelector(".loader-wrapper").style.display = "none" }
