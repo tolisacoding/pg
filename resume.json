@@ -18,8 +18,8 @@
     "coverLetter": {
         "en": [
             "It is so appreciated that you visit my website and consider me as a candidate for this job. I am a self-taught developer with one year work experience.",
-            "I worked as a front-end web developer at an online shopping mall company. I built new web pages according to art work, and worked with back-end engineers. I also modify or renew websites. Therefore, I am confident in creating new webpages and good at understanding other people’s code.",           
-            "I also work in a gaming company, in which I built game sheets. I need to create an RWD layout, and connect with API. I can create the whole page using only plain javascript(vanilla javascript) without any framework.",
+            "I worked as a front-end web developer at an online shopping mall company. I built new web pages according to art work, and worked with backend engineers. I also modify or renew websites. Therefore, I am confident in creating new webpages and good at understanding other people’s code.",           
+            "I also work in a gaming company, in which I built a game sheet. I need to create an RWD layout, and connect with API. I can create the whole page using only plain javascript(vanilla javascript) without any framework.",
             "Thank you very much for your time. hope to hear from you soon. Best Regards,",
             "Lisa Wang"
         ],
@@ -41,8 +41,9 @@
             "Strong in HTML5, CSS, Javascript",
             "Proficien Responsive Website Deign, flex, grid",
             "Expert in front-end frameworks-jQery, Boostrap, swiper, sementic UI",
-            "development tools: Chrome Dev Tool, vs code, cloud9",
+            "development tools: Chrome Dev Tool, Visual Studio Code",
             "CSS RWD：iframe, overlay, slider, autoplay, audio, fade, swiper, animation...etc",
+            "git version control",
             "problem solving: Stackoverflow, MDN, W3Schools"
             ],
         "zh": [
@@ -52,8 +53,9 @@
             "熟悉 CSS framework，API，如 Bootstrap,Swiper",
             "熟悉 Javascript, DOM 及各種API應用",
             "CSS網頁互動效果如：iframe,overlay, slider, autoplay, audio, fade, swiper, animation.",
-            "開發工具： Chrome Dev Tool 除錯、修改, sublime text 3, cloud9",
+            "開發工具： Chrome Dev Tool 除錯、修改, Visual Studio Code",
             "API文件閱讀能力、遇到問題會上Stackoverflow, MDN, W3Schools查詢並解決",
+            "git 版本控制",
             "基本photo shop修圖"
         ]
     },
@@ -116,94 +118,7 @@
     "projects": [
         {
             "year": {
-                "en": "Projects of the Year 2020",
-                "zh": "2020年作品"
-            },
-            "cards": [
-                {
-                    "img": "img/poke.png",
-                    "link": "https://lisawcoding.github.io/pokegame/",
-                    "en": 
-                        {   
-                            "title": "Pokemon Game",
-                            "des": [
-                                "use React, Hooks, Context, Router",
-                                "use PokéAPI to get pokemon data",
-                                "game and score sheet function",
-                                "style using SASS"
-                            ]
-                        },
-                    "zh":
-                        {
-                            "title": "寶可夢電腦遊戲",
-                            "des": [
-                                "用React, Hooks, Context, Router",
-                                "連接寶可夢API",
-                                "遊戲及遊戲單",
-                                "用SASS"
-                            ]
-                        }
-                }
-            ]
-        },
-        {
-            "year": {
-                "en": "Projects of the Year 2019",
-                "zh": "2019年作品"
-            },
-            "cards": [
-                {
-                    "img": "img/ecommerce.JPG",
-                    "link": "https://lisawcoding.github.io/ecommerce/",
-                    "en": 
-                        {   
-                            "title": "e-coomerce/online shopping mall",
-                            "des": [
-                                "build a online website with Vanilla JavaScript",
-                                "with shopping cart function",
-                                "get products detials from JSON file",
-                                "zoom in function for product details, swiper function, autoplay function",
-                                "localStorage function for store shopping cart products",
-                                "3 html pages redirect pages",
-                                "RWD"
-                            ]
-                        },
-                    "zh":
-                        {
-                            "title": "線上購物網站",
-                            "des": [
-                                "有購物車功能",
-                                "使用json代入產品資料",
-                                "放大鏡功能、手滑動功能、自動播放功能",
-                                "localStorage功能存取購買資料",
-                                "3層頁面：首頁、產品頁、購物車頁面",
-                                "RWD電腦、平板、手機視覺"
-                            ]
-                        }
-                },
-                {
-                    "img": "img/api.png",
-                    "link": "https://lisawcoding.github.io/api/",
-                    "en": 
-                        {
-                            "title": "Central Weather Bureau api",
-                            "des": [
-                                "fetch to get the Central Weather Bureau api"
-                            ]
-                        },
-                    "zh":
-                        {
-                            "title": "氣象局API網站",
-                            "des": [
-                                "用fetch連中央氣象局的api資料"
-                            ]
-                        }
-                }
-            ]
-        },
-        {
-            "year": {
-                "en": "Projects of the Year 2018",
+                "en": "project of the Year 2018",
                 "zh": "2018年作品"
             },
             "cards": [
@@ -270,7 +185,15 @@
                                 "網頁效果有：淡入淡出fadding, 自動播放／手選播放autoplay,  互動導覽列responsive navigation effect...等"
                             ]
                         }
-                },
+                }
+            ]
+        },
+        {
+            "year": {
+                "en": "project of the Year 2019",
+                "zh": "2019年作品"
+            },
+            "cards": [
                 {
                     "img": "img/index1.jpg",
                     "link": "https://lisawcoding.github.io/index-paper/",
@@ -290,6 +213,83 @@
                                 "使用HTML, CSS, Javascript",
                                 "用CSS畫出手機／平板／電腦的圖形，隨螢幕大小改變樣式",
                                 "加入音效"
+                            ]
+                        }
+                },
+                {
+                    "img": "img/ecommerce.JPG",
+                    "link": "https://lisawcoding.github.io/ecommerce/",
+                    "en": 
+                        {   
+                            "title": "e-coomerce/online shopping mall",
+                            "des": [
+                                "build a online website with Vanilla JavaScript",
+                                "with shopping cart function",
+                                "get products detials from JSON file",
+                                "localStorage function for store shopping cart",
+                                "RWD"
+                            ]
+                        },
+                    "zh":
+                        {
+                            "title": "線上購物網站",
+                            "des": [
+                                "有購物車功能",
+                                "使用json代入產品資料",
+                                "放大鏡功能、手滑動功能、自動播放功能",
+                                "localStorage功能存取購買資料",
+                                "3層頁面：首頁、產品頁、購物車頁面",
+                                "RWD電腦、平板、手機視覺"
+                            ]
+                        }
+                },
+                {
+                    "img": "img/api.png",
+                    "link": "https://lisawcoding.github.io/api/",
+                    "en": 
+                        {
+                            "title": "Central Weather Bureau api",
+                            "des": [
+                                "fetch to get the Central Weather Bureau api"
+                            ]
+                        },
+                    "zh":
+                        {
+                            "title": "氣象局API網站",
+                            "des": [
+                                "用fetch連中央氣象局的api資料"
+                            ]
+                        }
+                }
+            ]
+        },
+        {
+            "year": {
+                "en": "project of the Year 2020",
+                "zh": "2020年作品"
+            },
+            "cards": [
+                {
+                    "img": "img/poke.png",
+                    "link": "https://lisawcoding.github.io/pokegame/",
+                    "en": 
+                        {   
+                            "title": "Pokemon Game",
+                            "des": [
+                                "use React, Hooks, Context, Router",
+                                "use PokéAPI to get pokemon data",
+                                "game and score sheet function",
+                                "style using SASS"
+                            ]
+                        },
+                    "zh":
+                        {
+                            "title": "寶可夢電腦遊戲",
+                            "des": [
+                                "用React, Hooks, Context, Router",
+                                "連接寶可夢API",
+                                "遊戲及遊戲單",
+                                "用SASS"
                             ]
                         }
                 }
