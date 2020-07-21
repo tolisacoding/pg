@@ -7,6 +7,9 @@
 
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
       <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+      <meta name="keywords" content="developer front-end developer profolio, 前端工程師" />
+      <meta name="description" content="最專業的前端工程師, best web developer" />
       
       <link rel="icon" href="https://previews.123rf.com/images/hellocaicai/hellocaicai1802/hellocaicai180200422/95965943-cartoon-mushroom.jpg">
       <title>作品集</title>
@@ -21,7 +24,7 @@
                <li class="navItem" onclick="clickNav(2)" data-lan="project"></li>
                <li class="navItem" onclick="clickNav(3)" data-lan="contact"></li>
             </ul>
-            <div class="language-container">
+            <ul class="language-container">
                <li id="zh" >文</li>
                <li id="en">A</li>
                <li class="hamburger">
@@ -29,7 +32,7 @@
                   <span class="bar2"></span>
                   <span class="bar3"></span>
                </li>
-            </div>
+            </ul>
          </div>
       </nav>
       <!--navbar----------------------------------------------------------------------------------------------------------------------------->
@@ -39,10 +42,9 @@
                <div class="id-photo swiper-container">
                   <div class="swiper-wrapper">
                         <!-- <img src="img/me.jpg" alt="me" class="slide-active" class="swiper-slide"> -->
-                        <img src="img/resume2.jpg" alt="resume " class="swiper-slide">
+                        <img src="img/id_photo.JPG" alt="resume " class="swiper-slide">
                         <img src="img/resume3.jpg" alt="id photo" class="swiper-slide">                     
                   </div>
-
                   <!-- <div class="dots">
                      <div class="arrow prev"></div>
                      <div class="dot dot-active"></div>
@@ -59,8 +61,8 @@
                </a>
                <article>
                   <h2 data-lan="intro"></h2>
-                  <div data-list="coverLetter">
-                  </div>
+                  <ul data-list="coverLetter">
+                  </ul>
                </article>
             </div>
          </section>
@@ -98,25 +100,30 @@
             <div class="container">
                <h2 data-lan="contact"></h2>
                <div class="icons">
-                  <a href="https://goo.gl/maps/gqocZvEtw1p2XZon7" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
-                  <a href="tel:+886908117599"><i class="fas fa-phone" style="transform: scale(.9);"></i></a>
-                  <a href="sms:+886908117599"><i class="fas fa-comment-dots sms"></i></a>
-                  <a href="https://line.me/ti/p/11C3BFzUOA" target="_blank"><i class="fab fa-line"></i></a>
-                  <a href="skype:lisa.wang27?call"><i class="fab fa-skype"></i></a>
-                  <a href="mailto:tolisacoding@gmail.com" rel="nofollow" target="_blank"><i class="fas fa-envelope email"></i></a>
+                  <a href="https://goo.gl/maps/gqocZvEtw1p2XZon7" target="_blank"><i class="fas fa-map-marker-alt"></i>map</a>
+                  <a href="tel:+886908117599"><i class="fas fa-phone" style="transform: scale(.9);"></i>phone</a>
+                  <a href="sms:+886908117599"><i class="fas fa-comment-dots sms"></i>sms</a>
+                  <a href="https://line.me/ti/p/11C3BFzUOA" target="_blank"><i class="fab fa-line"></i>line</a>
+                  <a href="skype:lisa.wang27?call"><i class="fab fa-skype"></i>skype</a>
+                  <a href="mailto:tolisacoding@gmail.com" rel="nofollow" target="_blank"><i class="fas fa-envelope email"></i>email</a>
                </div>
                <form>
-                  <input type="text" name="name" placeholder="Name" required>
-                  <input type = "tel" name="phone" placeholder = "Phone or Email" required pattern = "[0-9]{7,}|[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
-                  <textarea name="message" id="" cols="30" rows="10" placeholder="Message" required></textarea>
+                  <label for='name'></label>
+                  <input type="text" name="name" placeholder="Name" required id="name">
+                  <label for='phone'></label>
+                  <input type = "tel" name="phone" placeholder = "Phone or Email" id="phone" required/>
+                  <label for="message"></label>
+                  <textarea name="message" id="" cols="30" rows="10" placeholder="Message" required id="message"></textarea>
                   <p class="check-number">
                      <span class="a"></span>
                      <span>+</span>
                      <span class="b"></span>
                      <spn>=</spn>
-                     <input class="sum" type="number" placeholder="" required>
+                     <label for="sum"></label>
+                     <input class="sum" type="number" placeholder="" required id="sum">
                   </p>
-                  <input type="submit" value=""data-lan="submit">
+                  <label for="submit"></label>
+                  <input type="submit" value=""data-lan="submit" id="submit">
                   <div class="alert">
                      <div class="alert-ok" data-lan="alert_ok"></div>
                      <div class="alert-ng" data-lan="alert_ng"></div>

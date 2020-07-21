@@ -422,6 +422,9 @@ img[src*="github"]:hover {
     text-align: center;
     margin-bottom: 1rem;
 }
+.contact a {
+    font-size: 0;
+}
 .loader-wrapper {
     position: absolute;
     top: 50%;
