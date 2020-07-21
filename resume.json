@@ -24,11 +24,12 @@
             "Lisa Wang"
         ],
         "zh": [
-            "玉婷自學網頁設計,主要為前端網頁部份。非常熟悉HTML，CSS和Javascript，熱愛手刻，且熟悉抓取後端API，代入前端...等。",
+            "玉婷自學網頁設計,主要為前端網頁部份。非常熟悉HTML，CSS/SCSS和Javascript及各框架（如：Bootstrap, jQuery等），且會看技術文件接API等。",
+            "CSS切版部份熟悉flexbox, 及grid的應用。",
             "因為是自學，所以遇到新的網頁效果、新的框架、新的技術等都可以很快的自行在網路上找到資源，解決問題。",
-            "有一年的前端開發工作經驗。第一份工作內容有開發維護網路商城的網站。工作分為2部份：優化及更新現有網頁，開發新的新網頁，主要是依美術的圖做切版及網頁視覺效果，RWD互動...等。第二份工作主要是關發新的遊戲說明頁、選單、遊戲表，主要是負責版型及接API，為速度考量，都用手刻，不代入框架。",
-            "而且我用英文及中文自學，所以可以利用的資源更多，所以專業人員、同事及客戶溝通專業術語都沒問題",
-            "希望能有機會可以為貴司服務，謝謝您"
+            "有一年的前端開發工作經驗。第一份工作內容有開發維護網路商城的網站。工作分為2部份：優化及更新現有網頁，開發新的新網頁，主要是依美術的圖做切版及網頁視覺效果，RWD版型、UX互動，網頁動態效果...等。第二份工作主要是關發新的遊戲說明頁、選單、遊戲表、註單，主要是負責版型及接API。",
+            "現在自學React.js，對程式非常有興趣。",
+            "希望有機會可以為貴公司服務，謝謝！"
         ]
     },
     "desc": {
@@ -37,7 +38,7 @@
     },
     "description": {
         "en": [
-            "React: Hooks, Contect, Router...etc",
+            "React.js: Hooks, Contect, Router...etc",
             "Strong in HTML5, CSS, Javascript",
             "Proficien Responsive Website Deign, flex, grid",
             "Expert in front-end frameworks-jQery, Boostrap, swiper, sementic UI",
@@ -47,7 +48,7 @@
             "problem solving: Stackoverflow, MDN, W3Schools"
             ],
         "zh": [
-            "使用React: Hooks, Context, Router",
+            "使用React.js: Hooks, Context, Router",
             "熟悉 HTML5 & CSS3，能夠解決跨瀏覽器的相容性",
             "熟悉 flexbox, CSS grid 的切版方式，應用RWD網頁，手機、電腦，平面各尺吋",
             "熟悉 CSS framework，API，如 Bootstrap,Swiper",
@@ -101,14 +102,14 @@
     },
     "topic": {
         "en": [
-            "React",
+            "React.js",
             "HTML",
             "CSS/SASS",
             "Javascript",
             "jQuery"
         ],
         "zh": [
-            "React",
+            "React.js",
             "HTML",
             "CSS/SASS",
             "Javascript",
@@ -123,7 +124,7 @@
             },
             "cards": [
                 {
-                    "img": "img/jpfood.jpg",
+                    "img": "img/food.jpg",
                     "link": "https://lisawcoding.github.io/clone-japanese-food/", 
                     "en": 
                         {   
@@ -236,7 +237,7 @@
                             "des": [
                                 "有購物車功能",
                                 "使用json代入產品資料",
-                                "放大鏡功能、手滑動功能、自動播放功能",
+                                "放大鏡、手滑動、自動播放功能",
                                 "localStorage功能存取購買資料",
                                 "3層頁面：首頁、產品頁、購物車頁面",
                                 "RWD電腦、平板、手機視覺"
@@ -270,13 +271,13 @@
             },
             "cards": [
                 {
-                    "img": "img/poke.png",
+                    "img": "img/pokemon.jpg",
                     "link": "https://lisawcoding.github.io/pokegame/",
                     "en": 
                         {   
                             "title": "Pokemon Game",
                             "des": [
-                                "use React, Hooks, Context, Router",
+                                "use React.js, Hooks, Context, Router",
                                 "use PokéAPI to get pokemon data",
                                 "game and score sheet function",
                                 "style using SASS"
@@ -286,10 +287,32 @@
                         {
                             "title": "寶可夢電腦遊戲",
                             "des": [
-                                "用React, Hooks, Context, Router",
+                                "用React.js, Hooks, Context, Router",
                                 "連接寶可夢API",
                                 "遊戲及遊戲單",
                                 "用SASS"
+                            ]
+                        }
+                },
+                {
+                    "img": "img/todolist.png",
+                    "link": "https://lisawcoding.github.io/TodoList/",
+                    "en": 
+                        {   
+                            "title": "Todo List",
+                            "des": [
+                                "use React.js, Hooks, Context, Router",
+                                "use firebase to store the data",
+                                "style using SASS"
+                            ]
+                        },
+                    "zh":
+                        {
+                            "title": "記事本",
+                            "des": [
+                                "React.js, Hooks, Context, Router",
+                                "SASS",
+                                "結合firebase存取資料"
                             ]
                         }
                 }

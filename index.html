@@ -4,8 +4,10 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+      
       <link rel="icon" href="https://previews.123rf.com/images/hellocaicai/hellocaicai1802/hellocaicai180200422/95965943-cartoon-mushroom.jpg">
       <title>作品集</title>
       <link rel="stylesheet" type="text/css" href="style.css">
@@ -33,18 +35,24 @@
       <!--navbar----------------------------------------------------------------------------------------------------------------------------->
       <main class="pimg1">
          <section class="section coverletter">
-            <div class="container swiper-container">
-               <div class="id-photo">
-                        <img src="img/me.jpg" alt="me" class="slide-active">
-                        <img src="img/resume2.jpg" alt="resume1">
-                        <img src="img/resume3.jpg" alt="id photo">
-                  <div class="dots">
+            <div class="container">
+               <div class="id-photo swiper-container">
+                  <div class="swiper-wrapper">
+                        <!-- <img src="img/me.jpg" alt="me" class="slide-active" class="swiper-slide"> -->
+                        <img src="img/resume2.jpg" alt="resume " class="swiper-slide">
+                        <img src="img/resume3.jpg" alt="id photo" class="swiper-slide">                     
+                  </div>
+
+                  <!-- <div class="dots">
                      <div class="arrow prev"></div>
                      <div class="dot dot-active"></div>
                      <div class="dot"></div>
                      <div class="dot"></div>
                      <div class="arrow next"></div>
-                 </div>
+                 </div> -->
+                 <div class="arrow prev swiper-button-prev"></div>
+                 <div class="swiper-pagination"></div>
+                 <div class="arrow next swiper-button-next"></div>
                </div>
                <a href="https://github.com/lisawcoding" target="_blank">
                   <img src="img/icon/github.png" alt="github icon">
@@ -52,7 +60,6 @@
                <article>
                   <h2 data-lan="intro"></h2>
                   <div data-list="coverLetter">
-                     
                   </div>
                </article>
             </div>
@@ -74,15 +81,15 @@
             <div class="container">
                <h2 data-lan="project"></h2>
                   <div class="cards-div">
-                           <div class="clone">
-                              <p class="year"></p>
-                              <a href="#" target="_blank"  style="position:relative">
-                                 <img src="" alt="">
-                                 <div class="title"><i></i></div>
-                                 <ul class="description"> 
-                                 </ul>
-                              </a>
-                           </div>
+                     <div class="clone">
+                        <p class="year"></p>
+                        <a href="#" target="_blank"  style="position:relative">
+                           <img src="" alt="">
+                           <div class="title"><i></i></div>
+                           <ul class="description"> 
+                           </ul>
+                        </a>
+                     </div>
                   </div>
             </div>   
          </section>
@@ -129,6 +136,7 @@
          Your browser does not support the audio element.
       </audio>
       
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
       <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
       <script type="text/javascript" src="resume.js"></script>
    </body>

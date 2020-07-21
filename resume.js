@@ -61,7 +61,7 @@ function translate(){
 				})
 			})
 		})
-		cardsDiv.querySelector('.clone').remove();
+		// document.querySelector('.projects .clone').remove();
 
 		// document.querySelectorAll(".year:not(.clone)").forEach(function(y){
 		// 	var n=Number(y.getAttribute("data-no"));
@@ -121,14 +121,13 @@ document.querySelectorAll(".language-container li:not([class*=hamburger])").forE
 		for(let sibling of this.parentNode.children){
 			console.log(this.parentNode.children);
 			sibling.classList.remove("active");
+			
 		}
 		this.classList.add("active");
 		lan=this.id;
 		runProject();
 	})
 })
-
-
 
 
 //navbar active seleted
@@ -216,65 +215,86 @@ hamburger.addEventListener("click", function(){
 // 	imgLoop();
 // })
 
-let dots=document.querySelectorAll(".dot");
-let next=document.querySelector(".next");
-let prev=document.querySelector(".prev");
-var slides=document.querySelectorAll(".id-photo img");
-let current=0;
+// let dots=document.querySelectorAll(".dot");
+// let next=document.querySelector(".next");
+// let prev=document.querySelector(".prev");
+// var slides=document.querySelectorAll(".id-photo img");
+// let current=0;
 
-
-let n=0;
-
-function reset(){
-    for(var i=0; i<dots.length; i++){
-        dots[i].classList.remove("dot-active");
-        slides[i].classList.remove("slide-active");
-    }
-}
-function runSlides(){
-	if(current<dots.length-1){
-		current++;
-	} else {
-		current=0;
-	}    
-	reset();
-	dots[current].classList.add("dot-active");  
-	slideAction();  
-}
-
-setInterval(function(){
-	runSlides();
-}, 3200)
-
-function slideAction(){
-    for(var i=0; i<dots.length; i++){
-        if(dots[i].classList.contains("dot-active")){
-            slides[i].classList.add("slide-active");
-            current=i;
-        }
-    }   
-}
-dots.forEach(function(dot){
-    dot.addEventListener("click", function(){
-        reset();
-        this.classList.add("dot-active");
-        slideAction();
-    })
-})
-next.addEventListener("click", function(){
-	runSlides();
-})
-prev.addEventListener("click", function(){
-    if(current<=0){
-        current=dots.length-1;
-    } else {
-        current--;
-    }    
-    reset();
-    dots[current].classList.add("dot-active");    
-    slideAction();
-})
-
+// let n=0;
+// function reset(){
+//     for(var i=0; i<dots.length; i++){
+//         dots[i].classList.remove("dot-active");
+//         slides[i].classList.remove("slide-active");
+//     }
+// }
+// function runSlides(){
+// 	if(current<dots.length-1){
+// 		current++;
+// 	} else {
+// 		current=0;
+// 	}    
+// 	reset();
+// 	dots[current].classList.add("dot-active");  
+// 	slideAction();  
+// }
+// setInterval(function(){
+// 	runSlides();
+// }, 3200)
+// function slideAction(){
+//     for(var i=0; i<dots.length; i++){
+//         if(dots[i].classList.contains("dot-active")){
+//             slides[i].classList.add("slide-active");
+//             current=i;
+//         }
+//     }   
+// }
+// dots.forEach(function(dot){
+//     dot.addEventListener("click", function(){
+//         reset();
+//         this.classList.add("dot-active");
+//         slideAction();
+//     })
+// })
+// next.addEventListener("click", function(){
+// 	runSlides();
+// })
+// prev.addEventListener("click", function(){
+//     if(current<=0){
+//         current=dots.length-1;
+//     } else {
+//         current--;
+//     }    
+//     reset();
+//     dots[current].classList.add("dot-active");    
+//     slideAction();
+// })
+// hero slider
+var idSwiper = new Swiper('.id-photo', {
+	speed: 600,
+	spaceBetween: 0,
+	autoplay: {
+	  delay: 2000,
+	  // disableOnInteraction: false,
+	},
+	loop: true,
+	grabCursor: true,
+	navigation: {
+	  nextEl: '.id-photo .swiper-button-next',
+	  prevEl: '.id-photo .swiper-button-prev',
+	},
+	pagination: {
+	  el: '.id-photo .swiper-pagination',
+	  clickable: true,
+	},
+  });
+  const swiperContainer=document.querySelector(".swiper-container");
+  swiperContainer.addEventListener("mouseover", function(){
+	heroSwiper.autoplay.stop();
+  })
+  swiperContainer.addEventListener("mouseout", function(){
+	heroSwiper.autoplay.start();
+  })
 
 // form sumbmit^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 //initialize Firebase
