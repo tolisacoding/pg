@@ -290,10 +290,10 @@ var idSwiper = new Swiper('.id-photo', {
   });
   const swiperContainer=document.querySelector(".swiper-container");
   swiperContainer.addEventListener("mouseover", function(){
-	heroSwiper.autoplay.stop();
+	idSwiper.autoplay.stop();
   })
   swiperContainer.addEventListener("mouseout", function(){
-	heroSwiper.autoplay.start();
+	idSwiper.autoplay.start();
   })
 
 // form sumbmit^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -379,6 +379,3 @@ function goToTop() {
 	document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-
-// loader6^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-// body.onload = function(){ document.querySelector(".loader-wrapper").style.display = "none" }
