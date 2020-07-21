@@ -22,7 +22,7 @@ body, html{
 }
 /*navbar**************************************************************************************************************/
 nav{
-    background: #333;
+    background: var(--black);
     position: fixed;
     width: 100%;
     z-index: 9;
@@ -460,7 +460,11 @@ img[src*="github"]:hover {
   }
 /*others^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
 
-
+@media only screen and (min-width: 500px){
+    .contact img[src*="phone"], .contact img[src*="sms"]{
+        display: none;
+    }
+}
 
 
 @media only screen and (max-width: 790px){
@@ -628,10 +632,19 @@ img[src*="github"]:hover {
   *[class*="paw"] li:hover {
       font-weight: 900;
   }
-  .contact i {
+  /* .contact i {
     font-size: 2.5rem;
     position: relative;
     color: var(--black);
+  } */
+  .contact img {
+    width: 2.5rem;
+    height: 2.5rem;
+    position: relative;
+  }
+  .contact img:hover {
+    transform: scale(1.2) !important;
+    transition: .2s;
   }
   .contact i:not([class*="phone"]):hover:after {
     content: "";
@@ -646,10 +659,10 @@ img[src*="github"]:hover {
     border-radius: 50px;
     z-index: -1;
   }
-  .contact i:hover {
+  /* .contact i:hover {
       transform: scale(1.2) !important;
       transition: .2s;
-  }
+  } */
   i[class*="line"]:hover {
     color: #00B900;
   }
