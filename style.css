@@ -404,8 +404,8 @@ img[src*="github"]:hover {
     animation: spin 2s linear infinite;
     margin-top: calc((100vh / 2 - 100px - 1em - 32px));
     width: 60%;
-    height: 60%;
-}
+    height:sdfdsaf60%;
+}sd
   @-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
     100% { -webkit-transform: rotate(360deg); }
@@ -625,4 +625,9 @@ img[src*="github"]:hover {
     margin: 0;
     text-align: right;
     font-size: 16px;
+}
+
+
+.pimg1 {
+    display: none;
 }
