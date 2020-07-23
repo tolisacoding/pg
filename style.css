@@ -629,5 +629,5 @@ img[src*="github"]:hover {
 
 
 nav, #topBtn {
-    display: none;
+    display: none !important;
 }
