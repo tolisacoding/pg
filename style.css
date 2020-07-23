@@ -10,7 +10,7 @@ body, html{
     line-height: 1.5em;
     font-family: 'Roboto Condensed','Microsoft JhengHei', sans-serif;
     scroll-behavior: smooth;
-    min-width: 390px;
+    /* min-width: 500px; */
 }
 .container{
     max-width:1170px;
@@ -628,6 +628,6 @@ img[src*="github"]:hover {
 }
 
 
-nav {
+nav, #topBtn {
     display: none;
 }
